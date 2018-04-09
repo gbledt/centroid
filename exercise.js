@@ -29,6 +29,14 @@ var calculateCentroid = function(points){
 
     // return centroid with the following format
     // return {x:10, y:30};  
+    var sumX = 0;
+    var sumY = 0;
+    var n = points.length;
+    points.forEach(function(point) {
+		sumX += point.x;
+		sumY += point.y;
+	});
+    return {x:Math.floor(sumX/n), y:Math.floor(sumY/n)};
 };
 
 
